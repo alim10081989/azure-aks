@@ -9,7 +9,8 @@ resource "azurerm_resource_group" "default" {
   location = "Central US"
 
   tags = {
-    environment = "Demo"
+    environment = "test"
+    service = "resource_group"
   }
 }
 
@@ -37,6 +38,6 @@ resource "azurerm_kubernetes_cluster" "default" {
 
   tags = {
     environment = "test"
-    app = "aks"
+    service = "aks"
   }
 }

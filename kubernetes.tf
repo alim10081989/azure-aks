@@ -1,6 +1,6 @@
 provider "kubernetes" {
-  config_path    = "C:\\Users\\alima\\.kube\\config"
-  config_context = "climbing-mollusk-aks"
+  config_path    = "~\\.kube\\config"
+  config_context = "${random_pet.prefix.id}-aks"
 }
 
 resource "kubernetes_deployment" "nginx" {
